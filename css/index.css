@@ -1,1 +1,132 @@
-/*# sourceMappingURL=index.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #bf5637;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.item {
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+}
+
+.item__inner {
+  padding: 88px 8px 0;
+}
+
+.item__contents {
+  position: relative;
+}
+
+.item___img__box {
+  max-width: 380px;
+  margin: 0 auto;
+}
+.item___img__box img {
+  width: 100%;
+  height: auto;
+}
+
+.item__text__box {
+  position: absolute;
+  width: 100%;
+  padding: 0 32px;
+  top: 181px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width:370px) {
+  .item__text__box {
+    top: 146px;
+  }
+}
+
+.item__text {
+  color: #002D52;
+  text-align: center;
+  font-family: "KsoFutokaisho";
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.39px;
+}
+@media screen and (max-width:345px) {
+  .item__text {
+    font-size: 10px;
+    line-height: 20px;
+  }
+}
+.item__text:nth-child(2) {
+  margin: 15px auto 11px;
+}
+@media screen and (max-width:370px) {
+  .item__text:nth-child(2) {
+    margin: 6px auto;
+  }
+}
+
+.koshu__link {
+  position: absolute;
+  top: 493px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media screen and (max-width:370px) {
+  .koshu__link {
+    top: 452px;
+  }
+}
+@media screen and (max-width:345px) {
+  .koshu__link {
+    top: 390px;
+  }
+}
+.koshu__link img {
+  height: auto;
+}
+
+.koshu__text__box {
+  position: relative;
+  max-width: 424px;
+  margin: 0 auto;
+}
+.koshu__text__box img {
+  height: auto;
+  position: absolute;
+  z-index: -1;
+}
+.koshu__text__box .koshu-img-left {
+  left: -8px;
+  top: -18px;
+}
+.koshu__text__box .koshu-img-right {
+  right: -8px;
+  top: -18px;
+}
+
+.koshu__text {
+  color: #E9D7B5;
+  font-size: 14px;
+  font-family: "KsoFutokaisho";
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1.4px;
+  padding-top: 15px;
+}
+.koshu__text strong {
+  font-size: 18px;
+  letter-spacing: -1.8px;
+}/*# sourceMappingURL=index.css.map */

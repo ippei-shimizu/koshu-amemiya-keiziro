@@ -1,0 +1,18 @@
+// color
+$color-bg: #bf5637;
+$color-text: #002D52;
+$color-text-bottom: #E9D7B5;
+// font-family
+$family-ksoFutokaisho: "KsoFutokaisho";
+
+//メディアクエリ
+@mixin media($breakpoint: md) {
+  @media #{map-get($breakpoint-up,$breakpoint)} {
+    @content;
+  }
+}
+//ブレイクポイント
+$breakpoint-up: (
+  "bp370": "screen and (max-width:370px)",
+  "bp345": "screen and (max-width:345px)",
+) !default;

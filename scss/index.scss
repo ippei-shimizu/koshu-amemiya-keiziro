@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@use "./setting" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-bg;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// @font-face {
+//   font-family: "GomariceKaijuMonster";
+//   src: url("../fonts/gomarice_kaiju_monster.ttf") format("truetype");
+// }
+
+.item {
+  height: 100vh;
+  height: 100svh;
+  width: 100%;
+}
+
+.item__inner {
+  padding: 88px 8px 0;
+}
+
+.item__contents {
+  position: relative;
+}
+
+.item___img__box {
+  max-width: 380px;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.item__text__box {
+  position: absolute;
+  width: 100%;
+  padding: 0 32px;
+  top: 181px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include media(bp370) {
+    top: 146px;
+  }
+}
+
+.item__text {
+  color: $color-text;
+  text-align: center;
+  font-family: $family-ksoFutokaisho;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: -0.39px;
+  @include media(bp345) {
+    font-size: 10px;
+    line-height: 20px;
+  }
+  &:nth-child(2) {
+    margin: 15px auto 11px;
+    @include media(bp370) {
+      margin: 6px auto;
+    }
+  }
+}
+
+.koshu__link {
+  position: absolute;
+  top: 493px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include media(bp370) {
+    top: 452px;
+  }
+  @include media(bp345) {
+    top: 390px;
+  }
+  img {
+    height: auto;
+  }
+}
+
+.koshu__text__box {
+  position: relative;
+  max-width: 424px;
+  margin: 0 auto;
+  img {
+    height: auto;
+    position: absolute;
+    z-index: -1;
+  }
+  .koshu-img-left {
+    left: -8px;
+    top: -18px;
+  }
+  .koshu-img-right {
+    right: -8px;
+    top: -18px;
+  }
+}
+
+.koshu__text {
+  color: $color-text-bottom;
+  font-size: 14px;
+  font-family: $family-ksoFutokaisho;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -1.4px;
+  padding-top: 15px;
+  strong {
+    font-size: 18px;
+    letter-spacing: -1.8px;
+  }
+}
