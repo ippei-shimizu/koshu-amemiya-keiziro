@@ -24,6 +24,7 @@ body {
 
 .item__inner {
   padding: 88px 8px 0;
+  position: relative;
 }
 
 .item__contents {
@@ -129,4 +130,45 @@ body {
 .koshu__text strong {
   font-size: 18px;
   letter-spacing: -1.8px;
+}
+
+.item__01 .swiper-button-prev {
+  width: 92.391px;
+  height: 81px;
+  top: initial;
+  left: -8px;
+  bottom: -12px;
+}
+.item__01 .swiper-button-prev::after {
+  display: none;
+}
+.item__01 .swiper-button-prev::before {
+  content: "";
+  display: block;
+  width: 92.391px;
+  height: 81px;
+  background-image: url(/images/no.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.item__01 .swiper-button-next {
+  width: 92.391px;
+  height: 81px;
+  top: initial;
+  right: -7px;
+  bottom: -12px;
+}
+.item__01 .swiper-button-next::after {
+  display: none;
+}
+.item__01 .swiper-button-next::before {
+  content: "";
+  display: block;
+  width: 92.391px;
+  height: 81px;
+  background-image: url(/images/yes.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }/*# sourceMappingURL=index.css.map */
