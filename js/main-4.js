@@ -11,7 +11,52 @@ document.addEventListener("DOMContentLoaded", event => {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev"
+    },
+    on: {
+      slideChange: function () {
+        checkSlideAndSetAllowance(this);
+      }
     }
+  });
+  // 関数を定義: スライドが'swiper-slide-01'の場合はallowSlideNextをfalseにする
+  function checkSlideAndSetAllowance(swiperInstance) {
+    if (swiperInstance.slides[swiperInstance.activeIndex].classList.contains("swiper-slide-01")) {
+      swiperInstance.allowSlideNext = false;
+      swiperInstance.allowTouchMove = false;
+    } else {
+      swiperInstance.allowSlideNext = true; 
+      swiperInstance.allowTouchMove = true;
+    }
+  }
+
+  // 初期化直後にも上記のロジックを実行
+  checkSlideAndSetAllowance(swiper);
+
+  let viewedSlides = {
+    "swiper-slide-02": false,
+  };
+
+  swiper.on("slideChangeTransitionStart", function () {
+    let currentSlideClass = this.slides[this.activeIndex].classList[1];
+    if (["swiper-slide-02"].includes(currentSlideClass)) {
+      if (viewedSlides[currentSlideClass] === false) {
+        this.allowSlideNext = false;
+        this.allowTouchMove = false;
+        viewedSlides[currentSlideClass] = true; // Mark as viewed
+      } else {
+        this.allowSlideNext = true;
+        this.allowTouchMove = true;
+      }
+    } else {
+      this.allowSlideNext = true;
+      this.allowTouchMove = true;
+    }
+  });
+
+  document.querySelectorAll(".swiper-button-next").forEach(nextButton => {
+    nextButton.addEventListener("click", function () {
+      swiper.allowSlideNext = true;
+    });
   });
 
   const videoElements = document.querySelectorAll(".video");
