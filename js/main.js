@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", event => {
+  event.preventDefault();
   gsap.registerPlugin(ScrollTrigger);
 
   const swiper = new Swiper(".swiper-container", {
     initialSlide: 1,
-    direction: "horizontal",
-    loop: false,
-    mousewheel: true,
+    // direction: "horizontal",
+    // loop: false,
+    // mousewheel: false,
     speed: 500,
     navigation: {
       nextEl: ".swiper-button-next",
@@ -72,7 +73,7 @@ document.addEventListener("DOMContentLoaded", event => {
         element.classList.add("openPageTitle");
 
         const spans = element.querySelectorAll("span:not(:empty)");
-        const durationPerSpan = 0.5; 
+        const durationPerSpan = 0.5;
         const totalAnimationDuration = spans.length * durationPerSpan;
         gsap.from(spans, {
           opacity: 0,
