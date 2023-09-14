@@ -52,9 +52,13 @@ body {
 }
 
 .item___img__box {
-  max-width: 380px;
+  max-width: 308px;
   margin: 0 auto;
   img {
+    width: 100%;
+    height: auto;
+  }
+  video {
     width: 100%;
     height: auto;
   }
@@ -64,7 +68,7 @@ body {
   position: absolute;
   width: 100%;
   padding: 0 32px;
-  top: 181px;
+  top: 132px;
   left: 50%;
   transform: translateX(-50%);
   @include media(bp370) {
@@ -76,10 +80,10 @@ body {
   color: $color-text;
   text-align: center;
   font-family: $family-ksoFutokaisho;
-  font-size: 13px;
+  font-size: 11px;
   font-style: normal;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 20px;
   letter-spacing: -0.39px;
   @include media(bp345) {
     font-size: 10px;
@@ -113,7 +117,7 @@ body {
 
 .koshu__link {
   position: absolute;
-  top: 493px;
+  top: 395px;
   left: 50%;
   transform: translateX(-50%);
   @include media(bp370) {
@@ -124,7 +128,24 @@ body {
   }
   img {
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
+}
+
+.kotira {
+  color: $color-text;
+  text-align: center;
+  font-family: $family-ksoFutokaisho;
+  font-size: 10px;
+  display: block;
+  padding-top: 4px;
+}
+
+.next-tugi {
+  color: #e9d7b5;
+  font-size: 16px;
+  font-family: "KsoShinfutokaisho";
 }
 
 .koshu__text__box {
@@ -163,7 +184,7 @@ body {
 
 .koshu__text {
   color: $color-text-bottom;
-  font-size: 14px;
+  font-size: 16px;
   font-family: $family-KsoShinfutokaisho;
   text-align: center;
   font-weight: 400;
@@ -171,20 +192,28 @@ body {
   strong {
     font-size: 18px;
   }
+}
 
+.text-sub {
+  color: $color-text-bottom;
+  font-size: 13px;
+  font-family: $family-KsoShinfutokaisho;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 12px;
 }
 
 .item__01 {
   .swiper-button-prev {
-    width: 92.391px;
-    height: 81px;
+    width: 132px;
+    height: 124px;
     top: initial;
-    left: -8px;
+    left: -7px;
     bottom: -12px;
     z-index: 3;
     @include media(bp390) {
-      width: 80px;
-      height: 68px;
+      width: 132px;
+      height: 124px;
     }
     &::after {
       display: none;
@@ -192,28 +221,28 @@ body {
     &::before {
       content: "";
       display: block;
-      width: 92.391px;
-      height: 81px;
+      width: 100%;
+      height: 100%;
       background-image: url(/images/no.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
       @include media(bp390) {
-        width: 80px;
-        height: 68px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
   .swiper-button-next {
-    width: 92.391px;
-    height: 81px;
+    width: 132px;
+    height: 124px;
     top: initial;
-    right: -7px;
+    right: -6px;
     bottom: -12px;
     z-index: 10;
     @include media(bp390) {
-      width: 80px;
-      height: 68px;
+      width: 132px;
+      height: 124px;
     }
     &::after {
       display: none;
@@ -221,15 +250,15 @@ body {
     &::before {
       content: "";
       display: block;
-      width: 92.391px;
-      height: 81px;
+      width: 132px;
+      height: 124px;
       background-image: url(/images/yes.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
       @include media(bp390) {
-        width: 80px;
-        height: 68px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -237,13 +266,21 @@ body {
 
 .item {
   .next-arrow {
-    width: 29px;
-    height: 25px;
+    width: 76px;
+    height: 76px;
+    border-radius: 100px;
+    background-color: #e9d7b5;
     top: initial;
     left: 50%;
-    bottom: -32px;
+    bottom: -86px;
     transform: translateX(-50%);
     z-index: 10;
+    span {
+      color: $color-text-bottom;
+      position: absolute;
+    right: -54px;
+    font-size: 20px;
+    }
     &::after {
       display: none;
     }
@@ -252,12 +289,20 @@ body {
       display: block;
       width: 29px;
       height: 25px;
-      background-image: url(/images/next-arrow.svg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
+      -webkit-mask-image: url(/images/next-arrow.svg);
+      mask-image: url(/images/next-arrow.svg);
+      background-color: $color-bg;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-position: center center;
+      mask-position: center center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
     }
   }
 }
 
-
+.swiper-video {
+  position: relative;
+  top: -38px;
+}
