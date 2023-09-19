@@ -24,6 +24,13 @@ body {
   font-family: "KsoFutokaisho";
   src: url("../fonts/KsoFutokaisho.otf") format("opentype");
 }
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    overflow: hidden;
+    padding-bottom: 40px;
+  }
+}
+
 .item {
   height: 100vh;
   height: 100svh;
@@ -39,16 +46,31 @@ body {
   position: relative;
   width: 100%;
 }
+@media screen and (min-width: 1024px) {
+  .item__inner {
+    max-width: 500px;
+  }
+}
 
 .item__contents {
   position: relative;
   max-width: 380px;
   margin: 0 auto;
 }
+@media screen and (min-width: 1024px) {
+  .item__contents {
+    max-width: 460px;
+  }
+}
 
 .item___img__box {
   max-width: 308px;
   margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .item___img__box {
+    max-width: 460px;
+  }
 }
 .item___img__box img {
   width: 100%;
@@ -67,9 +89,14 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-@media screen and (max-width:370px) {
+@media screen and (max-width: 370px) {
   .item__text__box {
     top: 146px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item__text__box {
+    top: 202px;
   }
 }
 
@@ -83,16 +110,23 @@ body {
   line-height: 20px;
   letter-spacing: -0.39px;
 }
-@media screen and (max-width:345px) {
+@media screen and (max-width: 345px) {
   .item__text {
     font-size: 10px;
     line-height: 20px;
   }
 }
+@media screen and (min-width: 1024px) {
+  .item__text {
+    font-size: 16.968px;
+    line-height: 32.632px;
+    letter-spacing: -0.509px;
+  }
+}
 .item__text:nth-child(2) {
   margin: 15px auto 11px;
 }
-@media screen and (max-width:370px) {
+@media screen and (max-width: 370px) {
   .item__text:nth-child(2) {
     margin: 6px auto;
   }
@@ -120,20 +154,30 @@ body {
   left: 50%;
   transform: translateX(-50%);
 }
-@media screen and (max-width:370px) {
+@media screen and (max-width: 370px) {
   .koshu__link {
     top: 452px;
   }
 }
-@media screen and (max-width:345px) {
+@media screen and (max-width: 345px) {
   .koshu__link {
     top: 390px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .koshu__link {
+    top: 598px;
   }
 }
 .koshu__link img {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+@media screen and (min-width: 1024px) {
+  .koshu__link img {
+    width: 89.39px;
+  }
 }
 
 .kotira {
@@ -143,6 +187,11 @@ body {
   font-size: 10px;
   display: block;
   padding-top: 4px;
+}
+@media screen and (min-width: 1024px) {
+  .kotira {
+    font-size: 14px;
+  }
 }
 
 .next-tugi {
@@ -162,13 +211,31 @@ body {
   position: absolute;
   z-index: -1;
 }
+@media screen and (min-width: 1024px) {
+  .koshu__text__box img {
+    width: 74.313px;
+    height: auto;
+  }
+}
 .koshu__text__box .koshu-img-left {
   left: -8px;
   top: -18px;
 }
+@media screen and (min-width: 1024px) {
+  .koshu__text__box .koshu-img-left {
+    left: -100px;
+    top: -80px;
+  }
+}
 .koshu__text__box .koshu-img-right {
   right: -8px;
   top: -18px;
+}
+@media screen and (min-width: 1024px) {
+  .koshu__text__box .koshu-img-right {
+    right: -100px;
+    top: -80px;
+  }
 }
 
 .item__01 .koshu__text__box {
@@ -178,9 +245,21 @@ body {
   left: 43px;
   top: -32px;
 }
+@media screen and (min-width: 1024px) {
+  .item__01 .koshu-img-left {
+    left: -98px;
+    top: -89px;
+  }
+}
 .item__01 .koshu-img-right {
   right: 43px;
   top: -32px;
+}
+@media screen and (min-width: 1024px) {
+  .item__01 .koshu-img-right {
+    right: -94px;
+    top: -89px;
+  }
 }
 
 .koshu__text {
@@ -194,6 +273,11 @@ body {
 .koshu__text strong {
   font-size: 18px;
 }
+@media screen and (min-width: 1024px) {
+  .koshu__text strong {
+    font-size: 21px;
+  }
+}
 
 .text-sub {
   color: #E9D7B5;
@@ -202,6 +286,11 @@ body {
   text-align: center;
   font-weight: 400;
   padding-top: 12px;
+}
+@media screen and (min-width: 1024px) {
+  .text-sub {
+    font-size: 16px;
+  }
 }
 
 .item__01 .swiper-button-prev {
@@ -212,10 +301,16 @@ body {
   bottom: -12px;
   z-index: 3;
 }
-@media screen and (max-width:390px) {
+@media screen and (max-width: 390px) {
   .item__01 .swiper-button-prev {
     width: 132px;
     height: 124px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item__01 .swiper-button-prev {
+    left: 13px;
+    bottom: 6px;
   }
 }
 .item__01 .swiper-button-prev::after {
@@ -231,10 +326,15 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (max-width:390px) {
+@media screen and (max-width: 390px) {
   .item__01 .swiper-button-prev::before {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item__01 .swiper-button-prev::before {
+    background-image: url(/images/no-pc.png);
   }
 }
 .item__01 .swiper-button-next {
@@ -245,10 +345,16 @@ body {
   bottom: -12px;
   z-index: 10;
 }
-@media screen and (max-width:390px) {
+@media screen and (max-width: 390px) {
   .item__01 .swiper-button-next {
     width: 132px;
     height: 124px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item__01 .swiper-button-next {
+    right: 20px;
+    bottom: 6px;
   }
 }
 .item__01 .swiper-button-next::after {
@@ -264,10 +370,15 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (max-width:390px) {
+@media screen and (max-width: 390px) {
   .item__01 .swiper-button-next::before {
     width: 100%;
     height: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .item__01 .swiper-button-next::before {
+    background-image: url(/images/yes-pc.png);
   }
 }
 
@@ -310,4 +421,56 @@ body {
 .swiper-video {
   position: relative;
   top: -38px;
-}/*# sourceMappingURL=index-2.css.map */
+}
+
+.pc-img {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .pc-img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 460px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pc-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pc-img-left {
+    left: -80px;
+    top: 43.4%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .pc-img-right {
+    right: -80px;
+    top: 43.4%;
+  }
+}
+
+.swiper-slide-04 .item__04,
+.swiper-slide-04 .item__05,
+.swiper-slide-05 .item__04,
+.swiper-slide-05 .item__05 {
+  position: relative;
+  top: -20px;
+}
+@media screen and (min-width: 1024px) {
+  .swiper-slide-04 .pc-img,
+  .swiper-slide-05 .pc-img {
+    top: 43.4%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-slide-02 .pc-img,
+  .swiper-slide-03 .pc-img {
+    top: 47.5%;
+  }
+}/*# sourceMappingURL=index-4.css.map */

@@ -6,15 +6,28 @@ $color-text-bottom: #E9D7B5;
 $family-ksoFutokaisho: "KsoFutokaisho";
 $family-KsoShinfutokaisho: "KsoShinfutokaisho";
 
-//メディアクエリ
-@mixin media($breakpoint: md) {
-  @media #{map-get($breakpoint-up,$breakpoint)} {
-    @content;
+
+// _setting.scss
+// ブレイクポイント
+$breakpoint-up: (
+  "min1024": "screen and (min-width: 1024px)",
+  "bp390": "screen and (max-width: 390px)",
+  "bp370": "screen and (max-width: 370px)",
+  "bp345": "screen and (max-width: 345px)"
+) !default;
+
+// メディアクエリ
+@mixin media($breakpoint: "bp390") { // デフォルトのブレイクポイントをbp390に変更
+  $media-query: map-get($breakpoint-up, $breakpoint);
+
+  @if $media-query {
+    @media #{$media-query} {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
   }
 }
-//ブレイクポイント
-$breakpoint-up: (
-  "bp390": "screen and (max-width:390px)",
-  "bp370": "screen and (max-width:370px)",
-  "bp345": "screen and (max-width:345px)",
-) !default;
+
+
+

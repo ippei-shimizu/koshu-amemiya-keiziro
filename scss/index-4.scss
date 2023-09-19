@@ -29,6 +29,13 @@ body {
   src: url("../fonts/KsoFutokaisho.otf") format("opentype");
 }
 
+.swiper-slide {
+  @include media(min1024) {
+    overflow: hidden;
+    padding-bottom: 40px;
+  }
+}
+
 .item {
   height: 100vh;
   height: 100svh;
@@ -37,23 +44,35 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @include media(bp760) {
+    position: relative;
+  }
 }
 
 .item__inner {
   padding: 0 8px;
   position: relative;
   width: 100%;
+  @include media(min1024) {
+    max-width: 500px;
+  }
 }
 
 .item__contents {
   position: relative;
   max-width: 380px;
   margin: 0 auto;
+  @include media(min1024) {
+    max-width: 460px;
+  }
 }
 
 .item___img__box {
   max-width: 308px;
   margin: 0 auto;
+  @include media(min1024) {
+    max-width: 460px;
+  }
   img {
     width: 100%;
     height: auto;
@@ -74,6 +93,9 @@ body {
   @include media(bp370) {
     top: 146px;
   }
+  @include media(min1024) {
+    top: 202px;
+  }
 }
 
 .item__text {
@@ -88,6 +110,11 @@ body {
   @include media(bp345) {
     font-size: 10px;
     line-height: 20px;
+  }
+  @include media(min1024) {
+    font-size: 16.968px;
+    line-height: 32.632px;
+    letter-spacing: -0.509px;
   }
   &:nth-child(2) {
     margin: 15px auto 11px;
@@ -126,10 +153,16 @@ body {
   @include media(bp345) {
     top: 390px;
   }
+  @include media(min1024) {
+    top: 598px;
+  }
   img {
     height: auto;
     display: block;
     margin: 0 auto;
+    @include media(min1024) {
+      width: 89.39px;
+    }
   }
 }
 
@@ -140,6 +173,9 @@ body {
   font-size: 10px;
   display: block;
   padding-top: 4px;
+  @include media(min1024) {
+    font-size: 14px;
+  }
 }
 
 .next-tugi {
@@ -157,14 +193,26 @@ body {
     height: auto;
     position: absolute;
     z-index: -1;
+    @include media(min1024) {
+      width: 74.313px;
+      height: auto;
+    }
   }
   .koshu-img-left {
     left: -8px;
     top: -18px;
+    @include media(min1024) {
+      left: -100px;
+      top: -80px;
+    }
   }
   .koshu-img-right {
     right: -8px;
     top: -18px;
+    @include media(min1024) {
+      right: -100px;
+      top: -80px;
+    }
   }
 }
 
@@ -175,10 +223,18 @@ body {
   .koshu-img-left {
     left: 43px;
     top: -32px;
+    @include media(min1024) {
+      left: -98px;
+      top: -89px;
+    }
   }
   .koshu-img-right {
     right: 43px;
     top: -32px;
+    @include media(min1024) {
+      right: -94px;
+      top: -89px;
+    }
   }
 }
 
@@ -191,6 +247,9 @@ body {
   padding-top: 15px;
   strong {
     font-size: 18px;
+    @include media(min1024) {
+      font-size: 21px;
+    }
   }
 }
 
@@ -201,6 +260,9 @@ body {
   text-align: center;
   font-weight: 400;
   padding-top: 12px;
+  @include media(min1024) {
+    font-size: 16px;
+  }
 }
 
 .item__01 {
@@ -214,6 +276,10 @@ body {
     @include media(bp390) {
       width: 132px;
       height: 124px;
+    }
+    @include media(min1024) {
+      left: 13px;
+      bottom: 6px;
     }
     &::after {
       display: none;
@@ -231,6 +297,9 @@ body {
         width: 100%;
         height: 100%;
       }
+      @include media(min1024) {
+        background-image: url(/images/no-pc.png);
+      }
     }
   }
   .swiper-button-next {
@@ -243,6 +312,10 @@ body {
     @include media(bp390) {
       width: 132px;
       height: 124px;
+    }
+    @include media(min1024) {
+      right: 20px;
+      bottom: 6px;
     }
     &::after {
       display: none;
@@ -259,6 +332,9 @@ body {
       @include media(bp390) {
         width: 100%;
         height: 100%;
+      }
+      @include media(min1024) {
+        background-image: url(/images/yes-pc.png);
       }
     }
   }
@@ -278,8 +354,8 @@ body {
     span {
       color: $color-text-bottom;
       position: absolute;
-    right: -54px;
-    font-size: 20px;
+      right: -54px;
+      font-size: 20px;
     }
     &::after {
       display: none;
@@ -305,4 +381,56 @@ body {
 .swiper-video {
   position: relative;
   top: -38px;
+}
+
+.pc-img {
+  display: none;
+  @include media(min1024) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 460px;
+  }
+  img {
+    @include media(min1024) {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-left {
+    @include media(min1024) {
+      left: -80px;
+      top: 43.4%;
+    }
+  }
+  &-right {
+    @include media(min1024) {
+      right: -80px;
+      top: 43.4%;
+    }
+  }
+}
+
+.swiper-slide-04,
+.swiper-slide-05 {
+  .item__04,
+  .item__05 {
+    position: relative;
+    top: -20px;
+  }
+  .pc-img {
+    @include media(min1024) {
+      top: 43.4%;
+    }
+  }
+}
+
+.swiper-slide-02,
+.swiper-slide-03 {
+  .pc-img {
+    @include media(min1024) {
+      top: 47.5%;
+    }
+  }
 }
